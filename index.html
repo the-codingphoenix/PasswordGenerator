@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <!-- favicon -->
+     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+     <!-- fontawesome -->
+     <script src="https://kit.fontawesome.com/f3726a4d63.js" crossorigin="anonymous"></script>
+     <!-- my css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- settings for password -->
+        <h1></h1>
+        <div class="password-settings" id="password-settings">
+            <div class="settings">
+                <label for="length">Password Length</label>
+                <input type="number" id="length" min="4" max="20" value="20" title="Maximum of 20 Characters">
+            </div>
+            <div class="settings">
+                <label for="uppercase">Include uppercase letters</label>
+                <input type="checkbox" name="uppercase" id="uppercase" checked>
+            </div>
+            <div class="settings">
+                <label for="lowercase">Include lowercase letters</label>
+                <input type="checkbox" name="lowercase" id="lowercase" checked>
+            </div>
+            <div class="settings">
+                <label for="numbers">Include numbers</label>
+                <input type="checkbox" name="numbers" id="numbers" checked>
+            </div>
+            <div class="settings">
+                <label for="symbols">Include symbols</label>
+                <input type="checkbox" name="symbols" id="symbols" checked>
+            </div>
+            <button class="btn" id="generate">
+                Generate Password
+            </button>
+        </div>
+        <!-- results -->
+         <div class="result-container" id="result-container" hidden>
+            <div class="results">
+                <span class="result" id="result"></span>
+                <div class="buttons">
+                    <button class="btn" id="copy">
+                        <i class="fa-regular fa-copy" title="Copy Password"></i>
+                    </button>
+                    <button class="btn btn2" id="new-btn">
+                        New Password
+                    </button>
+                </div>
+            </div>
+         </div>
+    </div>
+
+    <!-- js -->
+     <script src="script.js"></script>
+</body>
+</html>
